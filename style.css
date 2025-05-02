@@ -1,0 +1,40 @@
+body {
+    background-color: #ffffff !important;
+    font-family: Courier, monospace !important;
+  }
+  
+  #heading{
+    background-color: #0353a4 !important;
+  }
+  h1{
+    color: #ffffff !important;
+    font-weight: bold ;
+  }
+  
+  h2{
+    color: #001233;
+    font-weight: bold;
+  }
+  
+  .input-wide {
+      width: 25%;
+      max-width: 500px; 
+  }
+  
+  #columnD{
+    width: 25%;
+  }
+  
+  /* Initially hide rows */
+  .smooth-row {
+      opacity: 0;
+      transform: translateY(-20px); /* Start slightly above */
+      transition: transform 0.4s ease, opacity 0.4s ease; /* Smooth transition */
+  }
+  
+  /* Visible state for rows */
+  .smooth-row.visible {
+      opacity: 1;
+      transform: translateY(0); /* Slide to original position */
+  }
+  
