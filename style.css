@@ -1,40 +1,155 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
 body {
-    background-color: #ffffff !important;
-    font-family: Courier, monospace !important;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Header */
+#heading {
+  background-color: #0353a4 !important;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Form Styling */
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #2b2d42;
+}
+
+form input,
+form select,
+form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #2b2d42;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(43, 45, 66, 0.3);
+}
+
+/* Button Styling */
+button{
+  background-color: #2b2d42;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px !important;
+  padding: 10px 15px;
+  float: right;
+  justify-content: center;
+  margin: 10px !important;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+button:hover {
+  background-color: #0466c8;
+  transform: translateY(-2px);
+}
+
+/* Table Styling */
+#columnD{
+width: 25%;
+}
+
+table {
+  width: 100%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background-color: #2b2d42;
+  color: #000000;
+  font-weight: bold;
+}
+
+thead th {
+  padding: 10px;
+  text-align: left;
+}
+
+tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f4f7f6;
+}
+
+tbody tr:hover {
+  background-color: #eeeeee;
+}
+
+td {
+  padding: 10px;
+  text-align: left;
+  color: #333333;
+}
+
+/* Smooth Animation */
+.smooth-row {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.smooth-row.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 2rem;
   }
-  
-  #heading{
-    background-color: #0353a4 !important;
+
+  form {
+      padding: 15px;
   }
-  h1{
-    color: #ffffff !important;
-    font-weight: bold ;
+
+  button {
+      padding: 10px;
   }
-  
-  h2{
-    color: #001233;
-    font-weight: bold;
+
+  table {
+      font-size: 0.9rem;
   }
-  
-  .input-wide {
-      width: 25%;
-      max-width: 500px; 
-  }
-  
-  #columnD{
-    width: 25%;
-  }
-  
-  /* Initially hide rows */
-  .smooth-row {
-      opacity: 0;
-      transform: translateY(-20px); /* Start slightly above */
-      transition: transform 0.4s ease, opacity 0.4s ease; /* Smooth transition */
-  }
-  
-  /* Visible state for rows */
-  .smooth-row.visible {
-      opacity: 1;
-      transform: translateY(0); /* Slide to original position */
-  }
-  
+}
+
